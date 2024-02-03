@@ -21,16 +21,16 @@ public interface Stack<E> {
     E pop();
 
     /**
-     * Obtient l'élément situé au sommet de la pile.
+     * Renvoie le dernier élément sur la pile.
      *
      * @return l'élément au sommet de la pile
      */
     E top();
 
     /**
-     * Obtient la taille actuelle de la pile.
+     * Renvoie la longueur de la pile.
      *
-     * @return la taille de la pile
+     * @return la longueur de la pile
      */
     int size();
 
@@ -42,7 +42,7 @@ public interface Stack<E> {
     boolean isEmpty();
 
     /**
-     * Convertit le contenu de la pile en une représentation sous forme de chaîne.
+     * Produit une représentation en chaîne (String) des éléments de la pile classés de haut en bas.
      *
      * @return une représentation de la pile en String
      */
