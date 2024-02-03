@@ -1,4 +1,9 @@
-public class ArrayStack<E> implements Stack{
+/**
+ * Une classe représentant un stack
+ *
+ * @param <E> le type d'élément dans le stack
+ */
+public class ArrayStack<E> implements Stack<E> {
 
     private static final int maxSize = 100;
     private final E[] array;
@@ -9,11 +14,8 @@ public class ArrayStack<E> implements Stack{
         top = -1;
     }
 
-    /**
-     * Empile un élément
-     *
-     * @param e l'élément à empiler
-     */
+    /**{@inheritDoc}*/
+    @Override
     public void push(E e){
         if (top == maxSize -1) {
             throw new IllegalStateException("Stack overflow. Cannot push element");
@@ -24,11 +26,8 @@ public class ArrayStack<E> implements Stack{
         }
     }
 
-    /**
-     * Retire le dernier élément de la pile et le renvoie.
-     *
-     * @return le dernier élément de la pile
-     */
+    /**{@inheritDoc}*/
+    @Override
     public E pop(){
         if (isEmpty()){
             System.out.println("Stack underflow. Cannot pop element.");
@@ -41,11 +40,8 @@ public class ArrayStack<E> implements Stack{
 
     }
 
-    /**
-     * Obtient l'élément situé au sommet de la pile
-     *
-     * @return l'élément au sommet de la pile
-     */
+    /**{@inheritDoc}*/
+    @Override
     public E top(){
         if (isEmpty()) {
             System.out.println("Stack is empty. Cannot get top element.");
@@ -55,29 +51,20 @@ public class ArrayStack<E> implements Stack{
         }
     }
 
-    /**
-     * Obtient la taille actuelle de la pile
-     *
-     * @return la taille de la pile
-     */
+    /**{@inheritDoc}*/
+    @Override
     public int size(){
         return top + 1;
     }
 
-    /**
-     * Vérifie si la pile est vide
-     *
-     * @return true si la pile est vide, sinon false
-     */
+    /**{@inheritDoc}*/
+    @Override
     public boolean isEmpty(){
         return (top == -1);
     }
 
-    /**
-     * Convertit le contenu de la pile sous forme de String
-     *
-     * @return une représentation de la pile en String
-     */
+    /**{@inheritDoc}*/
+    @Override
     public String toString(){
         // Commencer à construire la chaîne
         StringBuilder result = new StringBuilder("[");
