@@ -1,3 +1,5 @@
+package Stack;
+
 /**
  * Une classe représentant un stack
  *

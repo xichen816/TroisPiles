@@ -1,3 +1,5 @@
+package Stack;
+
 /**
  * Une interface représentant un stack.
  *
