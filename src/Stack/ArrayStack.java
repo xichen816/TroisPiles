@@ -20,11 +20,10 @@ public class ArrayStack<E> implements Stack<E> {
     @Override
     public void push(E e){
         if (top == maxSize -1) {
-            throw new IllegalStateException("Stack overflow. Cannot push element");
+            throw new IllegalStateException("Pile pleine: L'élément ne peut être empilé");
         } else {
             top++;
             array[top] = e;
-            System.out.println("Pushed element: " + e);
         }
     }
 
@@ -32,8 +31,7 @@ public class ArrayStack<E> implements Stack<E> {
     @Override
     public E pop(){
         if (isEmpty()){
-            System.out.println("Stack underflow. Cannot pop element.");
-            return null;
+            throw new IllegalStateException("Pile vide: L'élément ne peut être retiré.");
         } else {
             E element = array[top];
             array[top--] = null; //libère la référence au dernier élément
@@ -46,8 +44,7 @@ public class ArrayStack<E> implements Stack<E> {
     @Override
     public E top(){
         if (isEmpty()) {
-            System.out.println("Stack is empty. Cannot get top element.");
-            return null;
+            throw new IllegalStateException("Pile vide: Le dernier élément ne peut être renvoyé");
         } else {
             return array[top];
         }
