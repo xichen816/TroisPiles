@@ -69,7 +69,7 @@ public class DoubleArrayStack<E> implements DoubleStack<E>{
     /**{@inheritDoc}*/
     @Override
     public boolean isFull() {
-        return (top1 + 1 == top2); // Vérifier s'il reste une espace entre les deux piles
+        return top1 + 1 == top2; // Vérifier s'il reste une espace entre les deux piles
     }
 
     /**{@inheritDoc}*/
