@@ -1,20 +1,22 @@
 package DoubleStack;
 
+/**
+ * Classe représentant deux piles
+ *
+ * @param <E> le type d'élément dans la pile
+ */
 public class DoubleArrayStack<E> implements DoubleStack<E>{
     private static final int maxSize = 100;
     private E[] array;
     private int top1, top2;
 
-    public void ArrayDoubleStack() {
+    @SuppressWarnings("unchecked")
+    public DoubleArrayStack() {
         array = (E[]) new Object[maxSize];
 
         // Initialiser les points de départ des deux piles.
         top1 = -1;
         top2 = maxSize;
-    }
-
-    public DoubleArrayStack(E[] array) {
-        this.array = array;
     }
 
     /**{@inheritDoc}*/

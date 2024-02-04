@@ -1,9 +1,9 @@
 package Stack;
 
 /**
- * Une classe représentant un stack
+ * Classe générique représentant une pile simple
  *
- * @param <E> le type d'élément dans le stack
+ * @param <E> le type d'élément dans la pile
  */
 public class ArrayStack<E> implements Stack<E> {
 
@@ -11,6 +11,7 @@ public class ArrayStack<E> implements Stack<E> {
     private final E[] array;
     private int top;
 
+    @SuppressWarnings("unchecked")
     public ArrayStack() {
         array = (E[]) new Object[maxSize];
         top = -1;
@@ -44,7 +45,7 @@ public class ArrayStack<E> implements Stack<E> {
     @Override
     public E top(){
         if (isEmpty()) {
-            throw new IllegalStateException("Pile vide: Le dernier élément ne peut être renvoyé");
+            throw new IllegalStateException("Pile vide: Le dernier élément ne peut être renvoyé.");
         } else {
             return array[top];
         }
