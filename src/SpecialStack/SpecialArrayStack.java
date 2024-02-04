@@ -18,6 +18,7 @@ public class SpecialArrayStack<T extends Comparable<T>> implements SpecialStack<
         top = -1;
     }
 
+    /**{@inheritDoc}*/
     @Override
     public void push(T t) {
         if (top == maxSize - 1) {
@@ -35,6 +36,7 @@ public class SpecialArrayStack<T extends Comparable<T>> implements SpecialStack<
         }
     }
 
+    /**{@inheritDoc}*/
     @Override
     public T pop() {
         if (isEmpty()) {
@@ -51,6 +53,7 @@ public class SpecialArrayStack<T extends Comparable<T>> implements SpecialStack<
         }
     }
 
+    /**{@inheritDoc}*/
     @Override
     public T top() {
         if (isEmpty()) {
@@ -61,16 +64,19 @@ public class SpecialArrayStack<T extends Comparable<T>> implements SpecialStack<
         }
     }
 
+    /**{@inheritDoc}*/
     @Override
     public int size() {
         return top + 1;
     }
 
+    /**{@inheritDoc}*/
     @Override
     public boolean isEmpty() {
         return top == -1;
     }
 
+    /**{@inheritDoc}*/
     @Override
     public T getMax() {
         if (isEmpty()) {

@@ -23,13 +23,12 @@ public class DoubleArrayStack<E> implements DoubleStack<E>{
     @Override
     public boolean push(boolean one, E e) {
         if (isFull()) {
-            throw new IllegalStateException("Piles vides: L'élément ne peut être empilé.");
+            return false;
         }
 
         if (one) {
             array[++top1] = e;
         } else {
-            // Pile 2 est incrémenté en sens inverse, car il commence au plus grand index
             array[--top2] = e;
         }
         return true;
@@ -70,7 +69,7 @@ public class DoubleArrayStack<E> implements DoubleStack<E>{
     /**{@inheritDoc}*/
     @Override
     public boolean isFull() {
-        return top1 + 1 == top2; // Vérifier s'il reste une espace entre les deux piles
+        return (top1 + 1 == top2); // Vérifier s'il reste une espace entre les deux piles
     }
 
     /**{@inheritDoc}*/

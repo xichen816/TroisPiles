@@ -71,6 +71,9 @@ public class Test {
         specialStack.push(3);
         specialStack.push(7);
 
+        // Retirer du sommet de la pile
+        System.out.println("Pop special: " + specialStack.pop());
+
         // Affichage du sommet de la pile
         System.out.println("Top special: " + specialStack.top());
 
