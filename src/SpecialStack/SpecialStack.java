@@ -43,7 +43,7 @@ public interface SpecialStack<T> {
     boolean isEmpty();
 
     /**
-     * Renvoie l'élément qui possède la plus grande valeur 
+     * Renvoie l'élément qui possède la plus grande valeur
      *
      * @return l'élément qui possède la valeur maximale de la pile
      */
