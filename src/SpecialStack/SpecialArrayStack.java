@@ -8,7 +8,7 @@ package SpecialStack;
 public class SpecialArrayStack<T extends Comparable<T>> implements SpecialStack<T>{
     private static final int maxSize = 100;
     private final T[] array;
-    private final T[] maxArray; // Array to track the maximum element at each position
+    private final T[] maxArray;
     private int top;
 
     @SuppressWarnings("unchecked")
