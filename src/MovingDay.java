@@ -6,7 +6,7 @@ public class MovingDay {
      * passer de Nam à Pam à Sam en 10 jours maximum et les unités de la ville doivent être dans cette ordre précis:
      * [N5, N4, N3, N2, N1].
      *
-      * @param <String>
+      * @param <String> le type d'élément contenu dans la pile
      */
     public static <String> void movingDay() {
         ArrayStack<String> Nam = new ArrayStack<String>();
@@ -20,7 +20,7 @@ public class MovingDay {
 
         /*
         Initialise le compteur "days" (compte le nombre de jours qui passent) à zéro.
-        Une phrase est aussi renvoyé afin d'informer l'utilisateur sur l'état du déplacement de la ville lors du jour 0.
+        Une phrase est aussi renvoyée afin d'informer l'utilisateur sur l'état du déplacement de la ville lors du jour 0.
          */
         int days = 0;
         System.out.println("\u001B[1m" + "Jour " + days + ": Nam" + "\u001B[0m" + Nam + " ,Pam" + Pam + " et Sam " + Sam);
@@ -31,7 +31,7 @@ public class MovingDay {
         "Nam" et le dépiler pour, ensuite, l'empiler dans la pile "Pam". Lorsque la pile est vide, on sort de la
         boucle.
         De plus, on met à jour, à chaque itération, le nombre de jours passé grâce au compteur "days".
-        Une phrase est aussi renvoyé afin d'informer l'utilisateur sur l'état du déplacement de la ville à chaque
+        Une phrase est aussi renvoyée afin d'informer l'utilisateur sur l'état du déplacement de la ville à chaque
         itération.
          */
         while (!Nam.isEmpty()) {
@@ -46,7 +46,7 @@ public class MovingDay {
         du dessus de la pile "Pam" et le dépiler pour, ensuite, l'empiler dans la nouvelle pile "Sam". Lorsque la pile
         "Sam" atteint la valeur de 5, on sort de la boucle.
         De plus, on met à jour, à chaque itération, le nombre de jours passé grâce au compteur "days".
-        Une phrase est aussi renvoyé afin d'informer l'utilisateur sur l'état du déplacement de la ville à chaque
+        Une phrase est aussi renvoyée afin d'informer l'utilisateur sur l'état du déplacement de la ville à chaque
         itération.
          */
         while (Sam.size() < 5) {
