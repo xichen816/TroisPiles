@@ -47,7 +47,7 @@ public class MovingDay {
 
         // Imprimer un message lorsque le compteur ne dépasse pas 10 jours
         } else {
-            System.out.println("Il est POSSIBLE de déplacer la ville dans les 10 jours, car " + days + "nombre de jours sont nécessaires.");
+            System.out.println("Il est POSSIBLE de déplacer la ville dans les 10 jours, car " + days + " jours sont nécessaires.");
         }
 
     }
