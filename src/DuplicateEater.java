@@ -13,10 +13,10 @@ public class DuplicateEater<E> {
      * Méthode qui enlève les mots en double dans une liste
      */
     public void pairDestroyer() {
-        String[] destroyer = new String[] {"hey", "hello", "hello", "hi", "hello"}; // Création de la liste à vérifier
+        String[] destroyer = new String[] {"hey", "hello", "hello", "hi", "hey"}; // Création de la liste à vérifier
         ArrayStack<String> withoutDuplicate = new ArrayStack<String>(); // Création d'une pile
 
-         String verif = ""; // initialise un string "vérif" vide
+         String verif = ""; // initialise un string "verif" vide
 
         System.out.println("Entrée :" + Arrays.toString(destroyer));
         System.out.println("Sortie :" + destroyer.length);
@@ -24,7 +24,7 @@ public class DuplicateEater<E> {
         for (String mot : destroyer) { // Boucle vérifiant s'il y a des doubles dans la liste
             if (mot == verif) { // Enlève le string en double
                 withoutDuplicate.pop();
-                if (withoutDuplicate.size() != 0) {
+                if (withoutDuplicate.size() != 0) {  // Remplace la valeur de "verif"
                     verif = withoutDuplicate.top();
                 }
             }
@@ -35,6 +35,6 @@ public class DuplicateEater<E> {
         }
 
         System.out.println("Entrée : " + Arrays.toString(destroyer));
-        System.out.println("Sortie : " + withoutDuplicate.size());
+        System.out.println("Sortie sans double: " + withoutDuplicate.size());
     }
 }
